@@ -33,7 +33,7 @@ class App extends React.Component {
                             <InboxView />
                         </Route>
                         <Route exact path="/emails/:id">
-                            <EmailView emailId={ window.location.pathname.split("/").reverse()[0] } />
+                            <EmailView emailId={ `${parseInt(window.location.pathname.split("/").reverse()[0]) - 1}`} />
                         </Route>
                         <Route exact path="/send">
                             <SendView />
